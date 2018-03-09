@@ -1,0 +1,11 @@
+<!DOCTYPE aspectj PUBLIC "-//AspectJ//DTD//EN" "http://www.eclipse.org/aspectj/dtd/aspectj.dtd">  
+<aspectj>  
+    <weaver options="-verbose">  
+        <!--  要改变那些包下的类，有@NoWeave注解的会跳过。-->  
+        <include within="com.alibaba.fastjson.*" />  
+    </weaver>  
+    <aspects>  
+        <!-- 声明的切面 -->  
+        <aspect name="tech.hongjian.aop_for_thirdjar.aop.JSONAspect" />  
+    </aspects>  
+</aspectj>  
